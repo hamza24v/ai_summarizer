@@ -4,3 +4,8 @@ As it's name implies, this site will summarize any article who's link is entered
 
 
 Guided tutorial: Credit goes to JavaScript Mastery :)
+
+Takaways:
+- got familiar with Redux toolkit
+- enhanced understanding of tailwind css
+- First exposure to OpenAi Api
