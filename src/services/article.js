@@ -1,8 +1,7 @@
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
 
 
-const rapidApiKey = '962dacb42amshf9711f4ea44c8d6p112738jsn454e1bd1efd3'    // issue with extracing key from import.meta.env.VITE_RAPID_API_ARTICLE_KEY;
-console.log("api key: " + rapidApiKey);
+const rapidApiKey = `${import.meta.env.VITE_RAPID_API_ARTICLE_KEY}`
 export const articleApi = createApi({
     reducerPath: 'articleApi',
     baseQuery: fetchBaseQuery({
@@ -15,7 +14,7 @@ export const articleApi = createApi({
     }),
     endpoints: (builder) => ({
         getSummary: builder.query({
-            query: (params) => `/summarize?url=${encodeURIComponent(params.articleUrl)}&length=3`, //encodeURI => usefule when passing user generated content.
+            query: (params) => `/summarize?url=${encodeURIComponent(params.articleUrl)}&length=3`, //encodeURI => usefull when passing user generated content.
         }),
     }),
 });
